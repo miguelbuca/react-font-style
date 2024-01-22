@@ -79,4 +79,3 @@ Contributions are welcome! If you encounter any issues or have suggestions for i
 This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit/)
  file for more details.
 # react-font-style
-# react-font-style
