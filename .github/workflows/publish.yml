@@ -30,5 +30,9 @@ jobs:
 
       - name: Build
         run: yarn build
+
+      - name: Authenticate with npm
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+
       - name: Publish
         run: yarn deploy
