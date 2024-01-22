@@ -9,7 +9,7 @@ The component is a tool that provides an information box with text formatting op
 To use the **FontEditor**, you can install it via npm:
 
 ```bash
-npm install react-font-editor
+npm install react-font-style
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ Import the **FontEditor** component in your code:
 
 ````javascript
 import React from 'react';
-import FontEditor from 'react-font-editor';
+import FontEditor from 'react-font-style';
 
 const App = () => {
   return (
@@ -78,4 +78,5 @@ Contributions are welcome! If you encounter any issues or have suggestions for i
 
 This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit/)
  file for more details.
+# react-font-style
 # react-font-style
