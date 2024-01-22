@@ -2,7 +2,7 @@
 
 The component is a tool that provides an information box with text formatting options for React applications.
 
-[<img src="https://raw.githubusercontent.com/miguelbuca/react-font-style/src/assets/img/example.png" height="200" width="600"/>](exampe.png)
+[<img src="https://raw.githubusercontent.com/miguelbuca/react-font-style/main/src/assets/img/example.png" height="200" width="600"/>](exampe.png)
 
 ## Installation
 
