@@ -33,13 +33,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          always-auth: true
 
       - name: Checkout repository
         uses: actions/checkout@v2
      
       - name: NPM
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+
+      - uses: actions/setup-node@v3
+        with:
+          always-auth: true
 
       - name: Publish to NPM
         run: yarn publish --access public
