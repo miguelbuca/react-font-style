@@ -62,7 +62,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:miguelbuca/react-font-style.git"
+    "url": "git+ssh://git@github.com/miguelbuca/react-font-style.git"
   },
   "publishConfig": {
     "@miguelbuca:registry": "https://npm.pkg.github.com"
