@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,23 +23,8 @@ jobs:
 
       - name: Build
         run: yarn build
-        
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          always-auth: true
-
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: NPM auth
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
 
       - name: Publish to NPM
-        run: yarn publish
+        run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc && yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
