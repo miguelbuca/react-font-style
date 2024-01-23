@@ -25,10 +25,10 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Log in to NPM
+      - name: NPM auth
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
 
-      - name: Publish to NPM
+      - name: Publish
         run: yarn cache clean && yarn deploy
         env:
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
