@@ -43,6 +43,6 @@ jobs:
           node-version: 18
 
       - name: Publish to NPM
-        run: ls && yarn publish --tag beta
+        run: cd react-font-style && yarn publish --tag beta
 
 
