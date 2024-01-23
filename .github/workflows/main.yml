@@ -37,5 +37,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: NPM auth
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+
       - name: Publish to NPM
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc && yarn publish
+        run: yarn publish --access public
