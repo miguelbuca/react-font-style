@@ -39,5 +39,5 @@ jobs:
 
       - name: Publish to NPM
         working-directory: ..
-        run: yarn publish ./package.json
+        run: yarn publish react-font-style/package.json
 
