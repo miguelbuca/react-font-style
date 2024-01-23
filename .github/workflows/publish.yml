@@ -18,13 +18,16 @@ jobs:
         with:
           node-version: 18
 
+      - name: Clean cache
+        run: yarn cache clean
+
       - name: Install dependencies
-        run: yarn cache clean && yarn install
+        run: yarn install
 
       - name: Build
         run: yarn build
 
-  Authenticate:
+  authentication:
     needs: build
     runs-on: ubuntu-latest
 
@@ -33,7 +36,7 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
         
   publish:
-    needs: Authenticate
+    needs: authentication
     runs-on: ubuntu-latest
 
     steps:
@@ -43,6 +46,6 @@ jobs:
           node-version: 18
 
       - name: Publish to NPM
-        run: yarn deploy
+        run: npm run publish
 
 
