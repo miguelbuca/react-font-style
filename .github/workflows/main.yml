@@ -43,6 +43,6 @@ jobs:
           node-version: 18
 
       - name: Publish to NPM
-        run: yarn publish auto
+        run: yarn publish --tag beta
 
 
