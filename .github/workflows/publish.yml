@@ -46,6 +46,6 @@ jobs:
           node-version: 18
 
       - name: Publish to NPM
-        run: npm run publish
+        run: yarn publish
 
 
