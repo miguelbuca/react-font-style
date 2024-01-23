@@ -19,6 +19,7 @@ jobs:
           node-version: latest
           registry-url: 'https://registry.npmjs.org'
           always-auth: true
+          cache: 'npm'
 
       - name: Configure npm registry
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
