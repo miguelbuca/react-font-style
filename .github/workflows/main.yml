@@ -42,7 +42,10 @@ jobs:
         with:
           node-version: 18
 
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Publish to NPM
-        run: cd ../react-font-style && yarn publish --tag beta
+        run: yarn publish --tag beta
 
 
