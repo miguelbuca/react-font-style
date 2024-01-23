@@ -2856,27 +2856,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@size-limit/esbuild@11.0.2":
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/@size-limit/esbuild/-/esbuild-11.0.2.tgz#8189d8f64b88a95a546ccf6393200cef57f3fe9a"
-  integrity sha512-67p+y+wkMBJJegLZUp1X3v1YEvgGSbbAukFbHtxJ1c/DTj/ApiHvtgMzvA5ij+A5UOay+jSU4bXetpNJlUK3Ow==
-  dependencies:
-    esbuild "^0.19.11"
-    nanoid "^5.0.4"
-
 "@size-limit/file@11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-11.0.2.tgz#1f53087e1c5043e09a37391702dc3a7ce8751935"
   integrity sha512-874lrMtWYRL+xb/6xzejjwD+krfHTOo+2uFGpZfJScvuNv91Ni2O7k0o09zC70VzCYBGkXquV92ln/H+/ognGg==
-
-"@size-limit/preset-small-lib@^11.0.2":
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/@size-limit/preset-small-lib/-/preset-small-lib-11.0.2.tgz#3fe304d8b4d567f58aeff40065e7c43f9de04586"
-  integrity sha512-Yo+RRHCLz29PMmRXzq69E3LjiAivspF2XRGdpZ+QdeFOotd3hBYVMJC9GDF3tEigPtfvEJk4L8YLlUK+SE90FA==
-  dependencies:
-    "@size-limit/esbuild" "11.0.2"
-    "@size-limit/file" "11.0.2"
-    size-limit "11.0.2"
 
 "@storybook/addon-actions@7.6.10":
   version "7.6.10"
