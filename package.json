@@ -33,7 +33,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "react-font-style",
+  "name": "@meunascimento/react-font-style",
   "author": "Miguel Buca",
   "module": "dist/react-font-style.esm.js",
   "devDependencies": {
