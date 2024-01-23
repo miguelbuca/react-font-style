@@ -30,17 +30,14 @@ jobs:
 
     steps:
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3, actions/checkout@v2
         with:
           node-version: 18
-
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
+     
       - name: NPM
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
 
       - name: Publish to NPM
-        run: yarn publish --tag beta
+        run: yarn publish --access public
 
 
