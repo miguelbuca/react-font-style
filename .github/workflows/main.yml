@@ -17,7 +17,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: latest
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm install
@@ -25,8 +24,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Publish
-        run: npm login --registry=https://registry.npmjs.org/ --always-auth --token=$NPM_TOKEN --no-optional --loglevel=warn && npm publish --access public
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Configure npm registry
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
+      - name: Publish
+        run: npm publish --access public
