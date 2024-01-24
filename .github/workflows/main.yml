@@ -26,6 +26,7 @@ jobs:
         run: npm run build
 
       - name: Publish
-        run: npm login --registry=https://registry.npmjs.org/ --always-auth --token=${{ secrets.NPM_TOKEN }} && npm publish --access public
+        run: npm login --registry=https://registry.npmjs.org/ --scope=@your-scope --always-auth --token=$NPM_TOKEN --no-optional --loglevel=warn && npm publish --access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
