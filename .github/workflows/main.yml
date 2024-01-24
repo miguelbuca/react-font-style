@@ -22,10 +22,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install
+        run: npm ci
 
       - name: Build
-        run: yarn build
+        run: npm run build
 
       - name: Publish
-        run: npm adduser --registry="//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" && yarn deploy
+        run: npm adduser --registry="//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" && npm run publish
