@@ -28,7 +28,7 @@ jobs:
         run: npm run build
 
       - name: Add user
-        run: npm adduser --registry="//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" npm run publish
+        run: npm adduser --registry="//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}"
 
       - name: Publish
-        run: npm run publish
+        run: npm run publish --access public
