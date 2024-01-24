@@ -18,7 +18,6 @@ jobs:
         with:
           node-version: latest
           registry-url: 'https://registry.npmjs.org'
-          always-auth: true
 
       - name: Install dependencies
         run: npm install
@@ -31,8 +30,8 @@ jobs:
 
       - name: Publish
         run: |
-          npm config get registry
-          npm publish --registry=https://npm.pkg.github.com/ --access public
+          npm adduser --registry=https://registry.npmjs.org/ --always-auth --token=${{ secrets.NPM_TOKEN }}
+          npm publish --access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
