@@ -25,12 +25,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Configure npm registry
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
       - name: Publish
         run: |
-          npm adduser --registry=https://registry.npmjs.org/ --always-auth --token=${{ secrets.NPM_TOKEN }}
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
           npm publish --access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
